@@ -3,7 +3,7 @@
     "username": "root",
     "password": "password",
     "database": "pmp_db",
-    "host": "localhost",
+    "host": "host",
     "dialect": "mysql",
     "operatorsAliases": false
   },
