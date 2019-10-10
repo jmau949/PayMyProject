@@ -1,0 +1,32 @@
+<section id="banner">
+    <div class="content">
+        <header>
+            <h1>User Login<br />
+            </h1>
+        </header>
+        <p>Please input email and password</p>
+    </div>
+</section>
+
+<section>
+
+    <form action='/login' method= 'POST'>
+        <div class="row gtr-uniform">
+            <div class="row gtr-uniform">
+                <div class="col-12 col-12-xsmall">
+                    <input name='loginName' type="text" id="usernameLogin" value="" placeholder="Username"/>
+                </div>
+
+                <div class="col-12 col-12-xsmall">
+                    <input name='loginPassword' type="password" id="passwordLogin" value="" placeholder="Password" />
+                </div>
+
+                <!-- Break -->
+                <div class="col-12">
+                    <ul class="actions">
+                        <li><input type="submit" id="loginUser" value="Submit" class="primary" /></li>
+                    </ul>
+                </div>
+            </div>
+    </form>
+</section>

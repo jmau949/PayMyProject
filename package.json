@@ -1,0 +1,35 @@
+{
+  "name": "paymyproject",
+  "version": "1.0.0",
+  "description": "PayMyProject is a full stack web application similar to Kickstarter or Patreon.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmau949/PayMyProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmau949/PayMyProject/issues"
+  },
+  "homepage": "https://github.com/jmau949/PayMyProject#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "connect-redis": "^4.0.3",
+    "dotenv": "^8.1.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.16.2",
+    "mysql2": "^1.7.0",
+    "redis": "^2.8.0",
+    "sequelize": "^5.19.5"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^5.5.1"
+  }
+}

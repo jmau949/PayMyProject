@@ -1,0 +1,31 @@
+
+<section id="banner">
+        <div class="content">
+          <header>
+            <h1>Hi, Welcome to PayMyProject<br />
+            </h1>
+            <p>A fully responsive site to support your favorite content/project creators</p>
+          </header>
+          <p>Please create a user account to follow and/or donate to your favorite projects. Or just browse current projects
+            as a guest! </p>
+        </div>
+      
+      </section>
+      <section>
+        <header class="major">
+          <h2>Current Open Projects</h2> <!-- Change to Following if following-->
+        </header>
+        <div class="posts">
+      
+          <% msg.forEach(function(item) { %>
+          <article>
+            <a class="image test"><img src=<%= item.Project.img %> alt="" /></a>
+            <h3><%= item.Project.name %></h3>
+            <p><%= item.Project.desc %></p>
+            <ul class="actions">
+              <li><a href="/project/<%= item.Project.id %>" class="button">More</a><a class="button" method="POST" name="follow">Follow</a></li>
+            </ul>
+          </article>
+          <% }); %>
+        </div>
+      </section>
