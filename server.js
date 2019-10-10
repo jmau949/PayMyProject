@@ -23,7 +23,7 @@ const REDIS_HOST = url.parse(process.env.REDIS_URL).hostname || "localhost"; // 
 const REDIS_PORT = Number(url.parse(process.env.REDIS_URL).port) || 6379; //
 
 // Create redis client
-const client = redis.createClient();
+const client = redis.createClient(process.env.REDISCLOUD_URL, {no_ready_check: true});
 
 // Middleware
 app.use(exSession({
