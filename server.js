@@ -19,8 +19,8 @@ const PORT = process.env.PORT || 8000;
 const SESS_NAME = "sid";
 const SESS_SECRET = "pmp-secret-donotreveal";
 const SESS_LIFE = 1000 * 60 * 60;
-const REDIS_HOST = "localhost"; // url.parse(process.env.REDIS_URL).hostname || 
-const REDIS_PORT = 6379; // Number(url.parse(process.env.REDIS_URL).port) 
+const REDIS_HOST = url.parse(process.env.REDIS_URL).hostname || "localhost"; // url.parse(process.env.REDIS_URL).hostname || 
+const REDIS_PORT = Number(url.parse(process.env.REDIS_URL).port) || 6379; //
 
 // Create redis client
 const client = redis.createClient();
