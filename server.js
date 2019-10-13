@@ -31,8 +31,8 @@ app.use(exSession({
   name: SESS_NAME,
   secret: SESS_SECRET,
   store: new redisStore({
-    host: REDIS_HOST,
-    port: REDIS_PORT,
+    // host: REDIS_HOST,
+    // port: REDIS_PORT,
     client: client
   }),
   saveUninitialized: false,
