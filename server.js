@@ -23,7 +23,7 @@ const SESS_LIFE = 1000 * 60 * 60;
 // const REDIS_PORT = 6379 // Number(url.parse(process.env.REDISCLOUD_URL).port) || 6379; //
 
 // Create redis client
-const client = redis.createClient(process.env.REDIS_URL);
+const client = redis.createClient(process.env.REDISCLOUD_URL);
 // process.env.REDISCLOUD_URL, {no_ready_check: true}
 
 // Middleware
