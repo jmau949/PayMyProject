@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 // Dependencies
-const url = require("url");
+
 const express = require("express");
 const exSession = require("express-session");
 const redis = require("redis");
@@ -17,13 +17,13 @@ const app = express();
 // Define session and redis constants
 const PORT = process.env.PORT || 8000;
 const SESS_NAME = "sid";
-const SESS_SECRET = "pmp-secret-donotreveal";
+const SESS_SECRET = "pmp-secret-donotreveal_2019-10";
 const SESS_LIFE = 1000 * 60 * 60;
-const REDIS_HOST = "localhost" // url.parse(process.env.REDISCLOUD_URL).hostname || "localhost"; // url.parse(process.env.REDIS_URL).hostname || 
-const REDIS_PORT = 6379 // Number(url.parse(process.env.REDISCLOUD_URL).port) || 6379; //
+// const REDIS_HOST = "localhost" // url.parse(process.env.REDISCLOUD_URL).hostname || "localhost"; // url.parse(process.env.REDIS_URL).hostname || 
+// const REDIS_PORT = 6379 // Number(url.parse(process.env.REDISCLOUD_URL).port) || 6379; //
 
 // Create redis client
-const client = redis.createClient();
+const client = redis.createClient(process.env.REDIS_URL);
 // process.env.REDISCLOUD_URL, {no_ready_check: true}
 
 // Middleware
