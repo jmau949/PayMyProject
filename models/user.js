@@ -7,27 +7,27 @@ module.exports = function (sequelize, DataTypes) {
             notNull: true,
             notEmpty: true,
             unique: true,
-            // validation: {
-            //     len: [usersUtil.nameMinLength, usersUtil.nameMaxLength]
-            // }
+            validation: {
+                len: [usersUtil.nameMinLength, usersUtil.nameMaxLength]
+            }
         },
         pass: {
             type: DataTypes.STRING.BINARY,
             notNull: true,
             notEmpty: true,
-            // validation: {
-            //     len: [usersUtil.passMinLength, usersUtil.passMaxLength]
-            // }
+            validation: {
+                len: [usersUtil.passMinLength, usersUtil.passMaxLength]
+            }
         },
         email: {
             type: DataTypes.STRING,
             notNull: true,
             notEmpty: true,
             unique: true,
-            // validation: {
-            //     len: [usersUtil.emailMinLength, usersUtil.emailMaxLength],
-            //     isEmail: true
-            // }
+            validation: {
+                len: [usersUtil.emailMinLength, usersUtil.emailMaxLength],
+                isEmail: true
+            }
         }
     });
 

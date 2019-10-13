@@ -1,43 +1,53 @@
 <section id="banner">
     <div class="content">
         <header>
-            <h1>User Registration<br />
-            </h1>
+            <h1>User Registration</h1>
         </header>
+
+        <br>
+
         <p>Please create a user account to follow and/or donate to your favorite projects.</p>
+        <br>
+
     </div>
 </section>
 
 <section>
 
-    <form action='/register' method='POST'>
+    <div class="row gtr-uniform">
+        <div class="col-5">
+            <% if(error) { %>
+            <span class="error">
+                <%= msg %>
+            </span>
+            <% } %>
+        </div>
+    </div>
+
+    <form method="POST" action="/register">
         <div class="row gtr-uniform">
             <div class="row gtr-uniform">
                 <div class="col-12 col-12-xsmall">
-                    <input type="text" id="usernameInput" value="" placeholder="Name" name='name'/>
+                    <input type="text" id="usernameInput" value="" placeholder="Name" name='username'>
                 </div>
                 <div class="col-12 col-12-xsmall">
-                    <input type="email" id="emailInput" value="" placeholder="Email" name='email'/>
+                    <input type="email" id="emailInput" value="" placeholder="Email" name='email'>
                 </div>
                 <div class="col-12 col-12-xsmall">
-                    <input type="password" id="passwordInput" value="" placeholder="password" name='password' />
+                    <input type="password" id="passwordInput" value="" placeholder="password" name='password'>
                 </div>
                 <div class="col-12  col-12-xsmall">
-                    <input type="password" id="passwordVerify" value="" placeholder="password" name='passwordVerify' />
+                    <input type="password" id="passwordVerify" value="" placeholder="password" name='passwordVerify'>
                 </div>
             </div>
-
-
 
             <!-- Break -->
             <div class="col-12">
                 <ul class="actions">
-                    <li><input type="submit" id="registerUser" value="Submit" class="primary" /></li>
-                    <li><input type="reset" value="Reset" /></li>
+                    <li><input type="submit" id="registerUser" value="Submit" class="primary"></li>
+                    <li><input type="reset" value="Reset"></li>
                 </ul>
             </div>
         </div>
     </form>
 </section>
-
-

@@ -1,41 +1,58 @@
-<section id="banner">
-  <div class="content">
-    <header>
-
+<!-- <script>
+  let foo = (e)=>{
+    let blah = e.target;
+    $(blah).attr('type', 'hidden')
+  }
+  </script> -->
+  
+  <section id="banner">
+  
+    <div class="content">
+  
+      <header>
         <% if(loggedIn) {%>
-          <h1>Hi <%= userResult.uName %>, Welcome to PayMyProject<br />
-          </h1>
-          <% } else { %>
-            <h1>Hi Guest, Welcome to PayMyProject<br />
-            </h1>
-          <% } %>
-      <p>A fully responsive site to support your favorite content/project creators</p>
+        <h1>Hi <%= userResult.uName %>, Welcome to PayMyProject</h1>
+        <br>
+        <% } else { %>
+        <h1>Hi Guest, Welcome to PayMyProject</h1>
+        <br>
+        <% } %>
+  
+        <p>A fully responsive site to support your favorite content/project creators</p>
+  
+      </header>
+  
+      <% if(!loggedIn) {%>
+      <p>PLEASE REGISTER/LOGIN TO CREATE OR FOLLOW PROJECTS AND/OR TO DONATE TO YOUR FAVORITE PROJECTS</p>
+      <% } %>
+    </div>
+  
+  </section>
+  
+  <section>
+  
+    <header class="major">
+      <h2>Current Open Projects</h2> <!-- Change to Following if following-->
     </header>
-    <p>Please create a user account to follow and/or donate to your favorite projects. Or just browse current projects
-      as a guest! </p>
-
-  </div>
-
-</section>
-<section>
-  <header class="major">
-    <h2>Current Open Projects</h2> <!-- Change to Following if following-->
-  </header>
-  <div class="posts">
-
-    <% msg.forEach(function(item) { %>
-    <article>
-      <a class="image test"><img src=<%= item.img %> alt="" /></a>
-      <h3><%= item.name %></h3>
-      <p><%= item.desc %></p>
-      <ul class="actions">
-        <li><a href="/project/<%= item.id %>" class="button">More</a></li>
-        <form action="/following" method="post">
-          <input type="submit" name="upvote" name2="name2" value="Follow" data-id="<%= item.id %>" />
-        </form>
-
-      </ul>
-    </article>
-    <% }); %>
-  </div>
-</section>
+  
+    <div class="posts">
+  
+      <% msg.forEach(function(item) { %>
+      <article>
+        <a class="image test"><img src=<%= item.img %> alt="" /></a>
+        <h3><%= item.name %></h3>
+        <p><%= item.desc %></p>
+        <ul class="actions">
+          <li><a href="/project/<%= item.id %>" class="button">More</a></li>
+          <% if(loggedIn) {%>
+            <form action="/following" method="post">
+              <input name="upvote" type="hidden" value="<%= item.id %>"/> 
+              <input type="submit" value="Follow" id='followed'/>
+              </form>
+            <% } %>
+        </ul>
+      </article>
+      <% }); %>
+  
+    </div>
+  </section>

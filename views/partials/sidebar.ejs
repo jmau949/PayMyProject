@@ -1,3 +1,4 @@
+  
 <div id="sidebar">
     <div class="inner">
 
@@ -15,18 +16,12 @@
             </header>
             <ul>
                 <li><a href="/">Homepage</a></li>
+                <% if(!loggedIn) {%>
                 <li><a href="/welcome">Register/Login</a></li>
+                <% } %>
                 <% if(loggedIn) {%>
                 <li><a href="/following">Following</a></li>
-                <% } else { %>
-                <li><a href="/notloggedin">Following</a></li>
-                <% } %>
-                <% if(loggedIn) {%>
                 <li><a href="/create">Create</a></li>
-                <% } else { %>
-                <li><a href="/notloggedin">Create</a></li>
-                <% } %>
-                <% if(loggedIn) {%>
                 <li><a href="/logout">Log Out</a></li>
                 <% } %>
 
@@ -49,7 +44,7 @@
 
         <!-- Footer -->
         <footer id="footer">
-            <p class="copyright">&copy; Untitled. All rights reserved. <a href="Github.com">Github</a></p>
+            <p class="copyright">&copy; Untitled. All rights reserved. <a href="https://github.com/jmau949/PayMyProject">Github</a></p>
         </footer>
 
     </div>
