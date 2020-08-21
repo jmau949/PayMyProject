@@ -1,55 +1,50 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 
 <html>
+  <head>
+    <title>PayMyProject</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <style>
+      .test {
+        height: 256px;
+      }
+    </style>
 
-<head>
-	<title>PayMyProject</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="/css/main.css" />
-	<style>
-		.test {
-			width: 416px;
-			height: 256px
-		}
-	</style>
-	
-	<script src="/js/jquery.min.js"></script>
-</head>
+    <script src="/js/jquery.min.js"></script>
+  </head>
 
-<body class="is-preload">
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Main -->
+      <div id="main">
+        <div class="inner">
+          <!-- Header -->
+          <header id="header">
+            <a href="/" class="logo"
+              ><strong>PayMyProject</strong> by Jonathan Mau, Andrew
+              Brookings</a
+            >
+          </header>
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+          <!-- Section -->
+          <%-body%>
+        </div>
+      </div>
 
-		<!-- Main -->
-		<div id="main">
-			<div class="inner">
+      <!-- Sidebar -->
+      <%- include ./partials/sidebar %>
+    </div>
 
-				<!-- Header -->
-				<header id="header">
-					<a href="/" class="logo"><strong>PayMyProject</strong> by Jonathan Mau, Andrew Brookings</a>
-
-				</header>
-
-				<!-- Section -->
-				<%-body%>
-
-			</div>
-		</div>
-
-		<!-- Sidebar -->
-		<%- include ./partials/sidebar %>
-
-	</div>
-
-	<!-- Scripts -->
-	<script src="/js/browser.min.js"></script>
-	<script src="/js/breakpoints.min.js"></script>
-	<script src="/js/util.js"></script>
-	<script src="/js/main.js"></script>
-
-
-</body>
-
+    <!-- Scripts -->
+    <script src="/js/browser.min.js"></script>
+    <script src="/js/breakpoints.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
 </html>
